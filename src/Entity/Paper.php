@@ -26,10 +26,8 @@ class Paper
     private ?int $weight = null;
 
     #[ORM\Column]
-    private ?float $offsetPricePerSheet = null;
+    private ?float $pricePerSheet = null;
 
-    #[ORM\Column]
-    private ?float $digitalPricePerSheet = null;
 
     public function getId(): ?int
     {
@@ -84,27 +82,17 @@ class Paper
         return $this;
     }
 
-    public function getOffsetPricePerSheet(): ?float
+    public function getPricePerSheet(): ?float
     {
-        return $this->offsetPricePerSheet;
+        return $this->pricePerSheet;
     }
 
-    public function setOffsetPricePerSheet(float $offsetPricePerSheet): static
+    public function setPricePerSheet(float $pricePerSheet): static
     {
-        $this->offsetPricePerSheet = $offsetPricePerSheet;
+        $this->pricePerSheet = $pricePerSheet;
 
         return $this;
     }
 
-     public function getDigitalPricePerSheet(): ?float
-    {
-        return $this->digitalPricePerSheet;
-    }
-
-    public function setDigitalPricePerSheet(float $digitalPricePerSheet): static
-    {
-        $this->digitalPricePerSheet = $digitalPricePerSheet;
-
-        return $this;
-    }
+   
 }
